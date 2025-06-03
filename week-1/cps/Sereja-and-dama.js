@@ -26,17 +26,46 @@ Output
 
 
 
-function resultCalculation (arr){
-    const sortedArr = arr.sort((a,b)=> a-b)
-    var sumA=0
-    var sumB=0
-    for(var i=0; i<sortedArr.length; i++){
-      if(i%2 == 0){
-        sumB+=sortedArr[i]
-      }else{
-        sumA+=sortedArr[i]
-      }
+// function resultCalculation (arr){
+//     const sortedArr = arr.sort((a,b)=> a-b)
+//     var sumA=0
+//     var sumB=0
+//     for(var i=0; i<sortedArr.length; i++){
+//       if(i%2 == 0){
+//         sumB+=sortedArr[i]
+//       }else{
+//         sumA+=sortedArr[i]
+//       }
+//     }
+//     return [sumB, sumA]  
+//   }
+
+
+function resultCalculation(arr) {
+    let sumA = 0, sumB = 0
+    let move = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (move == 0) {
+            if (arr[0] < arr[arr.length - 1]) {
+                sumA += arr[arr.length -1]
+                arr.pop()
+            } else{
+                sumA+=arr[0]
+                arr.shift()
+            }
+            move=1
+        } else {
+            if (arr[0] < arr[arr.length - 1]) {
+                sumB += arr[arr.length -1]
+                arr.pop()
+            } else{
+                sumB+=arr[0]
+                arr.shift()
+            }
+            move=0
+
+
+        }
     }
-    return [sumB, sumA]  
-  }
-  
+
+}
