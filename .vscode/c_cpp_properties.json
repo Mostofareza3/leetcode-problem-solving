@@ -14,7 +14,7 @@
                 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include",
                 "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks"
             ],
-            "compilerPath": "/usr/bin/g++",
+            "compilerPath": "/opt/homebrew/bin/g++-15",
             "intelliSenseMode": "macos-gcc-arm64",
             "cppStandard": "c++20"
         }
