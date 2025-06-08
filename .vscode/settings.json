@@ -1,0 +1,6 @@
+{
+    "code-runner.executorMap": {
+      "cpp": "g++-15 -std=c++17",
+      "c": "gcc-15"
+    }
+  }
