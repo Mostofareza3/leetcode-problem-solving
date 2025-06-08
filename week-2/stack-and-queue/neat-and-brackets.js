@@ -1,35 +1,37 @@
-
-
 class Node {
     constructor(data) {
-        this.data = data
-        this.next = null
+        this.data = data;
+        this.next = null;
     }
 }
 
 class Stack {
     constructor() {
-        this.top = null
-        this.size = 0
+        this.top = null;
+        this.size = 0;
     }
+
     push(data) {
-        const newNode = new Node(data)
-        newNode.next = this.top
-        this.top = newNode
-        this.size++
+        const newNode = new Node(data);
+        newNode.next = this.top;
+        this.top = newNode;
+        this.size++;
     }
-    pop() {
-        if (this.size === 0) return null;
-        const nextTop = this.top.next;
-        this.top = nextTop;
-        this.size--
+
+    peek() {
+        return this.top ? this.top.data : null;
     }
-    topValue() {
-        if (this.size === 0) return null;
-        return this.top.data
-    }
+
     isEmpty() {
-        return this.size ?? false
+        return this.size === 0;
+    }
+
+    pop() {
+        if (!this.top) return null;
+        const popped = this.top;
+        this.top = this.top.next;
+        this.size--;
+        return popped.data;
     }
 }
 
