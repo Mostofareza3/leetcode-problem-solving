@@ -22,9 +22,9 @@ class Stack {
         if (this.size === 0) return null;
         const nextTop = this.top.next;
         this.top = nextTop;
-        this.size --
+        this.size--
     }
-    topValue(){
+    topValue() {
         if (this.size === 0) return null;
         return this.top.data
     }
